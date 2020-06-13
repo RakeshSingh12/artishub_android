@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2cd664</color>
+    <color name="colorPrimaryDark">#2cd664</color>
+    <color name="colorAccent">#2cd664</color>
+
+    <color name="app_color">#0489cb</color>
+    <color name="app_color_two">#0083d5</color>
+    <color name="gradient_start">#2cd664</color>
+    <color name="gradient_end">#0082d5</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="dark_gray">#8f8f8f</color>
+    <color name="light_gray">#888888</color>
+    <color name="text_color_s">#5d5d5d</color>
+    <color name="background">#f5f5f5</color>
+
+    <color name="stoke_color">#dddddd</color>
+    <color name="elevation">#7fb2b2b2</color>
+
+
+    <color name="black">#000000</color>
+
+    <color name="light_black2">#808080</color>
+    <color name="light_black">#404040</color>
+    <color name="dark_black">#1D1D26</color>
+    <color name="tab_text_unselected">#A9A9A9</color>
+    <color name="tab_text_selected">#fafafa</color>
+    <color name="sticky_header_color">#F5F5F5</color>
+    <color name="hint_color">#9195a7</color>
+
+    <color name="tab_header">#616161</color>
+    <color name="red">#ff2c2c</color>
+    <color name="gray_color">#9e9e9e</color>
+
+    <color name="ripple_one">#82ff5a5a</color>
+    <color name="ripple_two">#46ff5a5a</color>
+    <color name="ripple_three">#28ff5a5a</color>
+
+
+    <!---->
+
+    <color name="text_color">#2d2d2d</color>
+    <color name="action_color">#2ec3ff</color>
+    <color name="bg_underline">#424242</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#28000000</color>
+    <color name="bg_light_gray">#e2e2e2</color>
+    <color name="bg_image">#c8c8c8</color>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+       <ImageView
+           android:id="@+id/imgIconComplete"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/icon_complete"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="@dimen/_40dp"
+
+
+           />
+        <TextView
+            android:id="@+id/txtOrderConfirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_25sp"
+            android:layout_below="@+id/imgIconComplete"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gill_sans_mt"
+            android:gravity="center"
+            android:text="Your Order has been placed Successfully"
+
+            />
+
+        <TextView
+            android:id="@+id/txtContinueShopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_25sp"
+            android:layout_below="@+id/txtOrderConfirmation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textColor="@color/app_color_two"
+            android:fontFamily="@font/gill_sans_mt"
+            android:gravity="center"
+            android:text="Continue Shopping"
+            />
+
+        <Button
+            android:id="@+id/btnTrackOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_below="@+id/txtContinueShopping"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/bg_statusbar"
+            android:text="Track Order"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            />
+
+
+
+    </RelativeLayout>
+
+</layout>

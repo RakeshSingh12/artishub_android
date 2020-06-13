@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/activity_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:background="@drawable/bg_statusbar"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:padding="@dimen/_5dp"
+                    android:src="@drawable/forma_1" />
+
+                <TextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:gravity="center"
+                    android:padding="@dimen/_5dp"
+                    android:text="Product"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sp" />
+
+                <ImageView
+                    android:id="@+id/imgRightSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5dp"
+                    android:padding="@dimen/_5dp"
+                    android:src="@drawable/notification" />
+
+
+            </LinearLayout>
+
+            <com.artishub.app.helpers.CustomViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/stoke_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40dp">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38dp"
+                    android:background="@color/white"
+                    app:tabGravity="fill"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="fixed" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white">
+
+                    <View
+                        android:id="@+id/viewOne"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/viewTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/viewThree"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/viewFour"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button"
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/drawer_layout"
+            layout="@layout/drawer_layout" />
+    </android.support.v4.widget.DrawerLayout>
+
+
+</layout>

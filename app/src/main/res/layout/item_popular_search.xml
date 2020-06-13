@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+android:padding="@dimen/_5dp"
+
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demo"
+        android:id="@+id/txtPopularSearch"
+        android:fontFamily="@font/gill_sans_mt"
+        android:textColor="@color/app_color_two"
+        android:textSize="@dimen/_15sp"
+        android:padding="@dimen/_8dp"
+        android:layout_margin="@dimen/_5dp"
+        android:background="@drawable/bg_popular_search"
+        />
+
+</android.support.constraint.ConstraintLayout>

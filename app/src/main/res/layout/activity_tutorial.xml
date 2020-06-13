@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:gravity="center"
+                    android:padding="@dimen/_5dp"
+                    android:text="Screen Name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_20sp" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtTitle"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5dp"
+                    android:text="LoremIpsum"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_15sp" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:id="@+id/rlBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_skip"
+                            android:layout_width="0dp"
+                            android:layout_margin="@dimen/_5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="SKIP"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_16sp"
+                            android:visibility="visible" />
+                        <RelativeLayout
+                            android:id="@+id/ll_indicator"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            >
+
+                            <com.artishub.app.helpers.CirclePageIndicator
+                                android:id="@+id/pageIndicator"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_3dp" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/txt_Next"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Next"
+                            android:fontFamily="@font/gill_sans_mt"
+                           android:layout_margin="@dimen/_5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sp"
+                           />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/txt_finish"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Get Started"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gill_sans_mt"
+                        android:layout_margin="@dimen/_5dp"
+                        android:background="@drawable/bg_button"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sp"
+                        />
+
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

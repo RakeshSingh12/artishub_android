@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgRateUs"
+            android:layout_width="wrap_content"
+            android:src="@drawable/img_rate_us"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:background="@drawable/bg_statusbar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgLeftSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/icon_arrow_left_copy_2" />
+
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/gill_sans_mt"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5dp"
+                android:text="Rate Us"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtRateUs"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgRateUs"
+            android:text="Rate Our App"
+            android:fontFamily="@font/gill_sans_mt"
+            android:textSize="@dimen/_18sp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txtRateUs"
+            android:stepSize="1"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_below="@+id/ratingBar"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+           android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/bg_statusbar"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@color/half_transparent"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

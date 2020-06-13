@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rlLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/txtProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/gill_sans_mt"
+                android:text="Guest"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sp" />
+
+            <LinearLayout
+                android:id="@+id/llPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtProfileName"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_call" />
+
+                <TextView
+                    android:id="@+id/txtProfilePhoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text=""
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_15sp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llPhoneNo"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_email" />
+
+                <TextView
+                    android:id="@+id/txtProfileEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text=""
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_15sp"
+
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llEmail"
+                android:layout_marginTop="@dimen/_20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:id="@+id/txtMyOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewOne"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:layout_marginLeft="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text="My Order"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:src="@drawable/icon_chevron" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlMyOrder"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:id="@+id/txtMyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewTwo"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:layout_marginLeft="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text="My Address"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:src="@drawable/icon_chevron" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyPaymentDetails"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlMyAddress"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:id="@+id/txtMyPaymentdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewThree"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:layout_marginLeft="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text="My Payment Details"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:src="@drawable/icon_chevron" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_below="@+id/txtMyPaymentdetails"
+                    android:background="@color/light_gray" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlGuest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtGuest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_100dp"
+                android:textSize="@dimen/_20sp"
+                android:text="Welcome Guest!"
+                android:fontFamily="@font/gill_sans_mt"
+                android:textColor="@color/text_color"
+                              />
+            <TextView
+                android:id="@+id/txtSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+               android:layout_below="@+id/txtGuest"
+                android:textSize="@dimen/_20sp"
+                android:text="Login/SignUp"
+                android:padding="@dimen/_5dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/gill_sans_mt"
+                android:textColor="@color/text_color"
+                />
+            <TextView
+                android:id="@+id/txtPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtSignUp"
+                android:textSize="@dimen/_15sp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                android:gravity="center"
+                android:padding="@dimen/_10dp"
+                android:fontFamily="@font/gill_sans_mt"
+                android:textColor="@color/text_color_s"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

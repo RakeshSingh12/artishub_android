@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:background="@drawable/bg_statusbar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgLeftSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/icon_arrow_left_copy_2" />
+
+            <EditText
+                android:id="@+id/txtHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@font/gill_sans_mt"
+                android:gravity="center_vertical"
+                android:hint="Search here"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:padding="@dimen/_5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_20sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPopularSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llHeader"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gill_sans_mt"
+                android:paddingLeft="@dimen/_5dp"
+                android:paddingRight="@dimen/_5dp"
+                android:paddingTop="@dimen/_10dp"
+                android:text="Popular Search"
+                android:textColor="@color/text_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llPopularSearch">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/txtNoItemfound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gill_sans_mt"
+                android:paddingLeft="@dimen/_5dp"
+                android:paddingRight="@dimen/_5dp"
+                android:paddingTop="@dimen/_10dp"
+                android:text=""
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textColor="@color/text_color" />
+
+            <RelativeLayout
+                android:id="@+id/rlLoader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/half_transparent"
+                android:clickable="true"
+                android:visibility="invisible">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loader"
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="@dimen/_100dp"
+
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/_5dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="loading.json"
+                    app:lottie_loop="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

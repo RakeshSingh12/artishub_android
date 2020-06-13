@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/txtCompleteProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:textSize="@dimen/_18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gill_sans_mt"
+            android:text="Complete Profile"
+            android:gravity="center_horizontal"
+            />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/txtCompleteProfileTitle"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45dp"
+                android:paddingLeft="@dimen/_5dp"
+                android:textColorHint="@color/app_color"
+                android:paddingRight="@dimen/_5dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint=" Full Name"
+                    android:inputType="textCapWords"
+                    android:paddingBottom="@dimen/_2dp"
+                    android:maxLength="25"
+                    android:paddingTop="@dimen/_2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/app_color"
+                    android:textColorHint="@color/app_color"
+                    android:textSize="@dimen/_15sp" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.3dp"
+                android:background="@drawable/bg_statusbar" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/llDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+
+            android:layout_below="@+id/llName"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtDeliveryPrefrences"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_5dp"
+                android:text="Delivery Prefrences"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_15sp"
+                android:drawableRight="@drawable/dropdown_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:textColor="@color/app_color"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                />
+            <Spinner
+                android:id="@+id/spinnerDelivery"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/_5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@drawable/dropdown_btn"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:background="@drawable/bg_statusbar" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/llDelivery"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45dp"
+                android:paddingLeft="@dimen/_5dp"
+                android:textColorHint="@color/app_color"
+                android:paddingRight="@dimen/_5dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Full Address"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/_2dp"
+                    android:paddingTop="@dimen/_2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/app_color"
+                    android:textColorHint="@color/app_color"
+                    android:textSize="@dimen/_15sp" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.3dp"
+                android:background="@drawable/bg_statusbar" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llAddressOne"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/llAddress"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputAddressOne"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45dp"
+                android:paddingLeft="@dimen/_5dp"
+                android:textColorHint="@color/app_color"
+                android:paddingRight="@dimen/_5dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edtAddressOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="House No./ Flat No"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/_2dp"
+                    android:paddingTop="@dimen/_2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/app_color"
+                    android:textColorHint="@color/app_color"
+                    android:textSize="@dimen/_15sp" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.3dp"
+                android:background="@drawable/bg_statusbar" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/llPayment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+
+            android:layout_below="@+id/llAddressOne"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtPaymentMode"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_5dp"
+                android:text="Payment Mode"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_15sp"
+                android:drawableRight="@drawable/dropdown_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:textColor="@color/app_color"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                />
+            <Spinner
+                android:id="@+id/spinnerPayment"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/_5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@drawable/dropdown_btn"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:background="@drawable/bg_statusbar" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_below="@+id/llPayment"
+            android:layout_marginLeft="@dimen/_40dp"
+            android:layout_marginRight="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:background="@drawable/bg_statusbar"
+            android:text="SUBMIT"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@color/half_transparent"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</layout>

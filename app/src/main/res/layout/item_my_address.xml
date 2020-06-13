@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/_5dp"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlLayerOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/txtAddressName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gill_sans_mt"
+                android:padding="@dimen/_5dp"
+                android:text="Ashutosh"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_15sp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAddressName"
+                android:fontFamily="@font/gill_sans_mt"
+                android:paddingLeft="@dimen/_5dp"
+                android:text="497, Evergreen Road, Roseville PMB 1551, Benin City - 001760"
+                android:textColor="@color/text_color_s"
+                android:textSize="@dimen/_12sp"
+
+                />
+            <TextView
+                android:id="@+id/txtAddressNumber"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAddress"
+                android:fontFamily="@font/gill_sans_mt"
+                android:paddingLeft="@dimen/_5dp"
+                android:text="Mobile - +234 001262 3012"
+                android:textColor="@color/text_color_s"
+                android:textSize="@dimen/_12sp"
+
+                />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/icon_delete"
+                />
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toLeftOf="@+id/imgDelete"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/icon_edit_copy"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlLayerTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_half"
+            android:visibility="gone"
+           >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tick" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</layout>

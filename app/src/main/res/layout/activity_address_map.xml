@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:background="@drawable/bg_statusbar"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgLeftSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:padding="@dimen/_5dp"
+                    android:src="@drawable/icon_arrow_left_copy_2" />
+
+                <TextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5dp"
+                    android:text="Add Address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170dp">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".MapsActivity" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_pin" />
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llAddressName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_marginLeft="@dimen/_30dp"
+                        android:layout_marginRight="@dimen/_30dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtAddressName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint=" Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="@dimen/_2dp"
+                            android:paddingTop="@dimen/_2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_s"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.3dp"
+                            android:background="@drawable/bg_statusbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddressPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_below="@+id/llAddressName"
+                        android:layout_marginLeft="@dimen/_30dp"
+                        android:layout_marginRight="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtAddressPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint=" Mobile no"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            android:padding="@dimen/_2dp"
+                            android:paddingTop="@dimen/_2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_s"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.3dp"
+                            android:background="@drawable/bg_statusbar" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_below="@+id/llAddressPhone"
+                        android:layout_marginLeft="@dimen/_30dp"
+                        android:layout_marginRight="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint=" Address"
+                            android:inputType="textCapWords"
+                            android:maxLength="100"
+                            android:padding="@dimen/_2dp"
+                            android:paddingTop="@dimen/_2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_s"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.3dp"
+                            android:background="@drawable/bg_statusbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddressLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_below="@+id/llAddress"
+                        android:layout_marginLeft="@dimen/_30dp"
+                        android:layout_marginRight="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtAddressLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint=" House No./ Flat No"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="@dimen/_2dp"
+                            android:paddingTop="@dimen/_2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_s"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.3dp"
+                            android:background="@drawable/bg_statusbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddressLandMark"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_below="@+id/llAddressLine"
+                        android:layout_marginLeft="@dimen/_30dp"
+                        android:layout_marginRight="@dimen/_30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edtAddressLandMark"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint=" Landmark"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="@dimen/_2dp"
+                            android:paddingTop="@dimen/_2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_s"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.3dp"
+                            android:background="@drawable/bg_statusbar" />
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btnAddAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_below="@+id/llAddressLandMark"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:layout_marginLeft="@dimen/_40dp"
+                        android:layout_marginRight="@dimen/_40dp"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:background="@drawable/bg_statusbar"
+                        android:text="Add Address"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sp" />
+
+                </RelativeLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_transparent"
+            android:clickable="true"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

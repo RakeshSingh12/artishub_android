@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.artishub.app"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled true
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.facebook.shimmer:shimmer:0.3.0'
+    implementation 'com.airbnb.android:lottie:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:gridlayout-v7:27.1.1'
+    implementation 'com.facebook.android:facebook-android-sdk:4.29.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.budiyev.android:code-scanner:1.9.1'
+    implementation 'joda-time:joda-time:2.9.9'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+}

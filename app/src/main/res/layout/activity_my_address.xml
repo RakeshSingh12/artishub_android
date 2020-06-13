@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:background="@drawable/bg_statusbar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgLeftSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/icon_arrow_left_copy_2" />
+
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/gill_sans_mt"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5dp"
+                android:text="My Address"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llHeader"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                >
+
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/txtAddMoreAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/recyclerViewAddress"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textColor="@color/app_color_two"
+                android:textSize="@dimen/_16sp"
+                android:fontFamily="@font/gill_sans_mt"
+                android:text="ADD MORE ADDRESS"
+                android:padding="@dimen/_5dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_transparent"
+            android:clickable="true"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

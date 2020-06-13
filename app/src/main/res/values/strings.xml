@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">ArtisHub</string>
+
+
+    <string name="google_maps_key">AIzaSyDEk4xXjXu9fUxTo5nEO0wKk4vGZ9PNgkA</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_name">Email/Phone Number</string>
+    <string name="dont_have_account">Don\'t have an Account?</string>
+    <string name="register_here">Register Here</string>
+    <string name="already_account">Already have an Account?</string>
+    <string name="login_here">Login Here</string>
+    <string name="error_generic">Something went wrong</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="enter_your_registered_email_phone_no">Enter Your Registered Email/Phone No</string>
+
+    <!--Otp Screen-->
+    <string name="dont_recieve_otp">Didn’t Receive Code?</string>
+    <string name="resend">Resend Now</string>
+    <string name="otp_has_been_sent_to_mobile_number">OTP has been sent to mobile number</string>
+    <string name="verify">Verify</string>
+
+
+    <string-array name="planets_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+
+    <!--Payment mode List-->
+    <string-array name="payment_mode">
+        <item>Test A</item>
+        <item>Test B</item>
+        <item>Test C</item>
+        <item>Test D</item>
+        <item>Test E</item>
+        <item>Test F</item>
+    </string-array>
+    <string name="title_activity_address_map">Add Address</string>
+    <string name="price">Price :</string>
+    <string name="seller">Seller Name :</string>
+    <string name="qty">Qty :</string>
+    <string name="total_price">Total price</string>
+    <string name="total_price_">Total price :</string>
+
+    <string name="checkout">Checkout</string>
+    <string name="personal_pickup">Personal Pickup</string>
+    <!--tutorial screen-->
+    <string name="screenName4">Personal Pickup</string>
+    <string name="screen4Description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="screenName3">Multiple Paymnet Mode</string>
+    <string name="screen3Description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="screenName2">Compare Price with Retailer</string>
+    <string name="screen2Description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="screenName1">Enjoy your Shopping</string>
+    <string name="screen1Description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="order_id">Order ID:</string>
+    <string name="date">Date:</string>
+    <string name="order_id_">Order ID :</string>
+</resources>

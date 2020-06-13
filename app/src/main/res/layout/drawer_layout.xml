@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="@dimen/_240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:clickable="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/llDrawerHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_statusbar"
+            android:padding="@dimen/_10dp">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text="Welcome"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sp" />
+
+                <TextView
+                    android:id="@+id/txtExistingUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:text="Guest!"
+                    android:paddingLeft="@dimen/_2dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_toRightOf="@+id/txtWelcome"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sp" />
+
+                    <TextView
+                        android:id="@+id/txtContactNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                       android:layout_below="@+id/txtWelcome"
+                        android:text="Login / Signup"
+                        android:fontFamily="@font/gill_sans_mt"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="Home"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+
+                <TextView
+                    android:id="@+id/nav_HelpCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:gravity="center_vertical"
+                    android:text="Help Center"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+                <TextView
+                    android:id="@+id/nav_Setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="Settings"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+                <TextView
+                    android:id="@+id/nav_AboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="About Us"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+                <TextView
+                    android:id="@+id/nav_Rate_Us"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="Rate Us"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+
+                <TextView
+                    android:id="@+id/nav_TC"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="Terms and conditions"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+                <TextView
+                    android:id="@+id/nav_Privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="Privacy Policy"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+
+                <TextView
+                    android:id="@+id/nav_Logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginLeft="@dimen/_20dp"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="Logout"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/gill_sans_mt"
+                    android:textColor="@color/text_color_s"
+                    android:textSize="@dimen/_15sp" />
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

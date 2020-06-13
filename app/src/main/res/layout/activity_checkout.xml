@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:background="@drawable/bg_statusbar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgLeftSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/icon_arrow_left_copy_2" />
+
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/gill_sans_mt"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5dp"
+                android:text="@string/checkout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sp" />
+
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_50dp"
+            android:layout_below="@+id/llHeader">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerCheckout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardViewTotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardView"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_2dp"
+                    android:padding="@dimen/_10dp"
+                   >
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/gill_sans_mt"
+                        android:paddingLeft="@dimen/_5dp"
+                        android:text="Total Payable Amount"
+                        android:textColor="@color/gray_color"
+                        android:textSize="@dimen/_15sp" />
+
+                    <TextView
+                        android:id="@+id/txtTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/gill_sans_mt"
+                        android:text="$ 2365"
+                        android:layout_marginEnd="@dimen/_5dp"
+                        android:textColor="@color/app_color_two"
+                        android:textSize="@dimen/_20sp" />
+
+                     <TextView
+                         android:id="@+id/txtShipping"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginLeft="@dimen/_10dp"
+                         android:layout_marginTop="@dimen/_5dp"
+                         android:fontFamily="@font/gill_sans_mt"
+                         android:text="Shipping charge"
+                         android:paddingLeft="@dimen/_5dp"
+                         android:layout_below="@+id/txtPrice"
+                         android:textColor="@color/gray_color"
+                         android:textSize="@dimen/_15sp" />
+
+                     <TextView
+                         android:id="@+id/txtShippingPrice"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                         android:fontFamily="@font/gill_sans_mt"
+                         android:layout_below="@+id/txtTotalPrice"
+                         android:text="$ 50"
+                         android:layout_marginEnd="@dimen/_5dp"
+                         android:textColor="@color/app_color_two"
+                         android:textSize="@dimen/_20sp" />
+                     <TextView
+                         android:id="@+id/txtVat"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginLeft="@dimen/_10dp"
+                         android:layout_marginTop="@dimen/_5dp"
+                         android:fontFamily="@font/gill_sans_mt"
+                         android:text="vat(15%)"
+                         android:paddingLeft="@dimen/_5dp"
+                         android:layout_below="@+id/txtShipping"
+                         android:textColor="@color/gray_color"
+                         android:textSize="@dimen/_15sp" />
+
+                     <TextView
+                         android:id="@+id/txtVatPrice"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                         android:fontFamily="@font/gill_sans_mt"
+                         android:layout_below="@+id/txtShippingPrice"
+                         android:text="$ 50"
+                         android:layout_marginEnd="@dimen/_5dp"
+                         android:textColor="@color/app_color_two"
+                         android:textSize="@dimen/_20sp" />
+                     <TextView
+                         android:id="@+id/txtTotal"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginLeft="@dimen/_10dp"
+                         android:layout_marginTop="@dimen/_5dp"
+                         android:fontFamily="@font/gill_sans_mt"
+                         android:text="Total Amount"
+                         android:layout_marginBottom="@dimen/_5dp"
+                         android:paddingLeft="@dimen/_5dp"
+                         android:layout_below="@+id/txtVat"
+                         android:textColor="@color/gray_color"
+                         android:textSize="@dimen/_15sp" />
+
+                     <TextView
+                         android:id="@+id/txtTotalprice"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                         android:fontFamily="@font/gill_sans_mt"
+                         android:layout_below="@+id/txtVatPrice"
+                         android:text="$ 50"
+                         android:layout_marginEnd="@dimen/_5dp"
+                         android:textColor="@color/app_color_two"
+                         android:textSize="@dimen/_20sp" />
+                 </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardViewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardViewTotalPrice"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtDeliveryOption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:fontFamily="@font/gill_sans_mt"
+                            android:padding="@dimen/_5dp"
+                            android:text="Delivery Option"
+                            android:textColor="@color/gray_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkboxPersonalPickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtDeliveryOption"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:fontFamily="@font/gill_sans_mt"
+                            android:paddingLeft="@dimen/_5dp"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            android:text="@string/personal_pickup"
+                            android:textSize="@dimen/_15sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkboxDelivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/checkboxPersonalPickup"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:layout_marginTop="@dimen/_5dp"
+                            android:paddingLeft="@dimen/_5dp"
+                            android:fontFamily="@font/gill_sans_mt_bold"
+                            android:text="Deliver to Saved Address"
+                            android:textColor="@color/app_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_below="@+id/checkboxDelivery"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:layout_marginBottom="@dimen/_10dp"
+                            android:layout_marginRight="@dimen/_10dp">
+
+                            <TextView
+                                android:id="@+id/txtAddressName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gill_sans_mt"
+                                android:padding="@dimen/_5dp"
+                                android:text="Ashutosh"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/txtAddress"
+                                android:layout_width="@dimen/_200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtAddressName"
+                                android:fontFamily="@font/gill_sans_mt"
+                                android:paddingLeft="@dimen/_5dp"
+                                android:text="497, Evergreen Road, Roseville PMB 1551, Benin City - 001760"
+                                android:textColor="@color/text_color_s"
+                                android:textSize="@dimen/_15sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/txtAddressNumber"
+                                android:layout_width="@dimen/_150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtAddress"
+                                android:fontFamily="@font/gill_sans_mt"
+                                android:paddingLeft="@dimen/_5dp"
+                                android:text="Mobile - +234 001262 3012"
+                                android:textColor="@color/text_color_s"
+                                android:textSize="@dimen/_15sp"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/imgEditAddress"
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/icon_edit_copy"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="@dimen/_5dp"
+                                android:layout_height="wrap_content" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtAddAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10dp"
+                            android:text="Add Address"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_5dp"
+                            android:textColor="@color/app_color_two"
+                            android:fontFamily="@font/gill_sans_mt"
+                            android:textSize="@dimen/_18sp"
+                            android:layout_below="@+id/checkboxDelivery"
+                            />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardViewAddress"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtPaymentMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:fontFamily="@font/gill_sans_mt"
+                            android:padding="@dimen/_5dp"
+                            android:text="Payment Option"
+                            android:textColor="@color/gray_color"
+                            android:textSize="@dimen/_15sp" />
+
+                       <LinearLayout
+                           android:id="@+id/llPaymentMode"
+                           android:layout_width="match_parent"
+                           android:layout_below="@+id/txtPaymentMode"
+                           android:orientation="horizontal"
+                           android:paddingLeft="@dimen/_10dp"
+                           android:paddingRight="@dimen/_10dp"
+                           android:layout_marginRight="@dimen/_15dp"
+                           android:layout_marginLeft="@dimen/_15dp"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:id="@+id/imgWallet"
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:paddingRight="@dimen/_10dp"
+                               android:paddingLeft="@dimen/_10dp"
+                               android:src="@drawable/wallet_normal"
+                               android:layout_height="wrap_content" />
+                           <ImageView
+                               android:id="@+id/imgBanking"
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:paddingRight="@dimen/_10dp"
+                               android:paddingLeft="@dimen/_10dp"
+                               android:src="@drawable/banking_card_normal"
+                               android:layout_height="wrap_content" />
+                           <ImageView
+                               android:id="@+id/imgCashOnDelivery"
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:paddingRight="@dimen/_10dp"
+                               android:paddingLeft="@dimen/_10dp"
+                               android:src="@drawable/cash_normal"
+                               android:layout_height="wrap_content" />
+
+                       </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/llPaymentMode"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/_10dp"
+                            android:paddingRight="@dimen/_10dp"
+                            android:paddingBottom="@dimen/_5dp"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/txtWallet"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="Wallet"
+                                android:fontFamily="@font/gill_sans_mt"
+                                android:gravity="center"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/txtBanking"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="Net Banking"
+                                android:fontFamily="@font/gill_sans_mt"
+                                android:gravity="center"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/txtCashOnDelivery"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:fontFamily="@font/gill_sans_mt"
+                                android:text="Cash on Delivery"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+           android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnOrderPlace"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40dp"
+                android:text="@string/checkout"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gill_sans_mt"
+                android:background="@drawable/bg_button" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_transparent"
+            android:clickable="true"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

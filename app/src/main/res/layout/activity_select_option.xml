@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/activityChoose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/imgBackGround"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon_bg"
+            android:layout_marginTop="-450dp"
+            android:layout_marginRight="-160dp"
+            android:layout_marginLeft="-160dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_logo_chosse"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_70dp"
+            />
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_below="@+id/imgBackGround"
+            android:layout_marginTop="@dimen/_60dp"
+            android:layout_marginLeft="@dimen/_50dp"
+            android:layout_marginRight="@dimen/_50dp"
+            android:background="@drawable/bg_statusbar"
+            android:text="Login"
+            android:fontFamily="@font/gill_sans_mt"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            />
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_below="@+id/btnLogin"
+            android:layout_marginTop="@dimen/_20dp"
+            android:fontFamily="@font/gill_sans_mt"
+            android:layout_marginLeft="@dimen/_50dp"
+            android:layout_marginRight="@dimen/_50dp"
+            android:background="@drawable/bg_statusbar"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/white"
+            android:text="SignUp"
+            />
+
+
+    </RelativeLayout>
+</layout>

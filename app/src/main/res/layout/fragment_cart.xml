@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:id="@+id/rlEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imgEmptyCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_100dp"
+                android:src="@drawable/icon_empty_cart" />
+
+            <TextView
+                android:id="@+id/txtYourCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgEmptyCart"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="Your cart is empty"
+                android:textStyle="bold"
+                android:fontFamily="@font/gill_sans_mt"
+                android:textColor="@color/gray_color" />
+
+            <TextView
+                android:layout_width="@dimen/_200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtYourCart"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:fontFamily="@font/gill_sans_mt"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                android:textColor="@color/gray_color" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerCart"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_60dp"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/rlTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:elevation="@dimen/_2dp"
+            android:padding="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:fontFamily="@font/gill_sans_mt"
+                android:paddingLeft="@dimen/_5dp"
+                android:text="@string/total_price"
+                android:textColor="@color/gray_color"
+                android:textSize="@dimen/_15sp" />
+
+            <TextView
+                android:id="@+id/txtTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPrice"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:fontFamily="@font/gill_sans_mt"
+                android:padding="@dimen/_5dp"
+                android:textColor="@color/app_color_two"
+                android:textSize="@dimen/_20sp" />
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/checkout"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gill_sans_mt"
+                android:layout_marginRight="@dimen/_10dp"
+                android:background="@drawable/bg_button" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_transparent"
+            android:clickable="true"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
